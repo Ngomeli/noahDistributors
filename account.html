@@ -29,18 +29,38 @@
                 <a href="cart.html" target="_blank"><img src="images/cart.png" alt="Cart image" class="cart" width="30px" height="30px"></a>
                 <img src="images/menu.png" alt="" class="menuBtn" onclick="menutoggle()">
             </div>
-            <!-- <div class="row">
-                <div class="col-2">
-                    <h1>Give Your Workout<br> A New Style!</h1>
-                    <p>Success isn't always about greatness. It's about consitency. Consistent<br> hard work gains success. Greatness will come.</p>
-                    <a href="" class="btn">Explore Now &#10137;</a>
-                </div>
-                <div class="col-2">
-                    <img src="images/image1.png" alt="">
-                </div>
-            </div> -->
         </div>
     </header>
+    <section class="accountPage">
+        <div class="container">
+            <div class="row">
+                <div class="col-2">
+                    <!-- <img src="images/account.jpeg" width="100%"> -->
+                </div>
+                <div class="col-2">
+                    <div class="formContainer">
+                        <div class="formBtn">
+                            <span onclick="login()">Login</span>
+                            <span onclick="register()">Register</span>
+                            <hr id="indicator">
+                        </div>
+                        <form action="" id="loginForm">
+                            <input type="text" placeholder="Username">
+                            <input type="password" placeholder="password">
+                            <button type="submit" class="btn">Login</button>
+                            <a href="">Forgot Password</a>
+                        </form>
+                        <form action="" id="registerForm">
+                            <input type="text" placeholder="Username">
+                            <input type="email" placeholder="Email">
+                            <input type="password" placeholder="password">
+                            <button type="submit" class="btn">Login</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
     <script src="main.js"></script>
 </body>
 </html>
