@@ -1,3 +1,11 @@
+<?php
+session_start();
+
+include("dbConnection.php");
+include("functions.php");
+
+$user_data = check_login($conn);
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,15 +23,15 @@
         <div class="container">
             <div class="navbar">
                 <div class="logo">
-                    <a href="index.html"> <img src="images/NOAH DISTRIBUTORS PNG.png" alt="logo icon" width="125px"></a>
+                    <a href="index.php"> <img src="images/NOAH DISTRIBUTORS PNG.png" alt="logo icon" width="125px"></a>
                 </div>
                 <nav>
                     <ul id="MenuItems">
-                        <li><a href="index.html">Home</a></li>
+                        <li><a href="index.php">Home</a></li>
                         <li><a href="#products">Products</a></li>
                         <li><a href="#services">Services</a></li>
                         <li><a href="#about">About</a></li>
-                        <li><a href="account.html" target="_blank">Account</a></li>
+                        <li><a href="account.php" target="_blank">Account</a></li>
                     </ul>
                 </nav>
                 <a href="cart.html" target="_blank"><img src="images/cart.png" alt="Cart image" class="cart" width="30px" height="30px"></a>
