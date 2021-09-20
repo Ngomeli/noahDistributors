@@ -1,7 +1,10 @@
 <?php
 session_start();
 
+ include("dbConnection.php");
+ include("functions.php");
 
+ $user_data = check_login($conn);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -49,17 +52,18 @@ session_start();
                             <span onclick="register()">Register</span>
                             <hr id="indicator">
                         </div>
-                        <form action="" id="loginForm">
+                        <form method="post" id="loginForm">
                             <input type="text" name="user_name" placeholder="Username">
                             <input type="password" name="password" placeholder="password">
                             <button type="submit" id="button" class="btn">Login</button>
-                            <a href="">Forgot Password</a>
+                            
                         </form>
-                        <form action="post" id="registerForm">
+                        <form method="post" id="registerForm">
                             <input type="text" name="user_name" placeholder="Username">
                             <input type="email" name="email" placeholder="Email">
                             <input type="password" name="password" placeholder="password">
                             <button type="submit" class="btn">Register</button>
+                            <!-- <a href="login.php">Already have account?</a> -->
                         </form>
                     </div>
                 </div>
