@@ -32,7 +32,7 @@ $user_data = check_login($conn);
                         <li><a href="#products">Products</a></li>
                         <li><a href="#services">Services</a></li>
                         <li><a href="#about">About</a></li>
-                        <li><?php echo $user_data['user_name']; ?> <a href="logout.php" target="_blank">Logout</a></li>
+                        <li><?php echo $user_data['user_name']; ?> <a href="logout.php">Logout</a></li>
                     </ul>
                 </nav>
                 <a href="cart.html" target="_blank"><img src="images/cart.png" alt="Cart image" class="cart" width="30px" height="30px"></a>
