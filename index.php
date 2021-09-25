@@ -1,4 +1,10 @@
 <?php
+session_start();
+
+include("dbConnection.php");
+include("functions.php");
+
+$user_data = check_login($conn);
 
 ?>
 <!DOCTYPE html>
@@ -26,24 +32,13 @@
                         <li><a href="#products">Products</a></li>
                         <li><a href="#services">Services</a></li>
                         <li><a href="#about">About</a></li>
-                        <li><a href="account.php" target="_blank">Account</a></li>
+                        <li><?php echo $user_data['user_name']; ?> <a href="logout.php" target="_blank">Logout</a></li>
                     </ul>
                 </nav>
                 <a href="cart.html" target="_blank"><img src="images/cart.png" alt="Cart image" class="cart" width="30px" height="30px"></a>
                 <img src="images/menu.png" alt="" class="menuBtn" onclick="menutoggle()">
             </div>
-            <!-- <div class="row">
-                <div class="col-2">
-                    <h1>Give Your Workout<br> A New Style!</h1>
-                    <p>Success isn't always about greatness. It's about consitency. Consistent<br> hard work gains success. Greatness will come.</p>
-                    <a href="" class="btn">Explore Now &#10137;</a>
-                </div>
-                <div class="col-2">
-                    <img src="images/image1.png" alt="">
-                </div>
-            </div> -->
-        </div>
-    </header>
+          
     <script src="main.js"></script>
 </body>
 </html>
