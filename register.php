@@ -1,5 +1,4 @@
 <?php 
-
 session_start();
 
 	include("dbConnection.php");
@@ -15,35 +14,74 @@ session_start();
 		if(!empty($user_name) && !empty($password) && !is_numeric($user_name))
 		{
 
-			//read from database
-			$query = "select * from users where user_name = '$user_name' limit 1";
-			$result = mysqli_query($conn, $query);
+			//save to database
+			$user_id = random_num(20);
+			$query = "insert into users (user_id,user_name,password) values ('$user_id','$user_name','$password')";
 
-			if($result)
-			{
-				if($result && mysqli_num_rows($result) > 0)
-				{
+			mysqli_query($conn, $query);
 
-					$user_data = mysqli_fetch_assoc($result);
-					
-					if($user_data['password'] === $password)
-					{
-
-						$_SESSION['user_id'] = $user_data['user_id'];
-						header("Location: index.php");
-						die;
-					}
-				}
-			}
-			
-			echo "wrong username or password!";
+			header("Location: login.php");
+			die;
 		}else
 		{
-			echo "wrong username or password!";
+			echo "Please enter some valid information!";
 		}
 	}
-
 ?>
+
+
+<!-- <!DOCTYPE html>
+<html>
+<head>
+	<title>Signup</title>
+</head>
+<body>
+
+	<style type="text/css">
+	
+	#text{
+
+		height: 25px;
+		border-radius: 5px;
+		padding: 4px;
+		border: solid thin #aaa;
+		width: 100%;
+	}
+
+	#button{
+
+		padding: 10px;
+		width: 100px;
+		color: white;
+		background-color: lightblue;
+		border: none;
+	}
+
+	#box{
+
+		background-color: grey;
+		margin: auto;
+		width: 300px;
+		padding: 20px;
+	}
+
+	</style>
+
+	<div id="box">
+		
+		<form method="post">
+			<div style="font-size: 20px;margin: 10px;color: white;">Signup</div>
+
+			<input id="text" type="text" name="user_name"><br><br>
+			<input id="text" type="password" name="password"><br><br>
+
+			<input id="button" type="submit" value="Signup"><br><br>
+
+			<a href="login.php">Click to Login</a><br><br>
+		</form>
+	</div>
+</body>
+</html> -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -66,14 +104,13 @@ session_start();
                 <div class="col-2">
                     <div class="formContainer">
                         <div class="formBtn">
-                            <span>Login</span>
+                            <span>Register</span>
                             <hr id="indicator">
                         </div>
                         <form action="" method="POST">
                             <input type="text" name="user_name" placeholder="Username">
-                            <input type="password" name="password" placeholder="password">
-                            <button type="submit" class="btn">Login</button>
-                            <a href="register.php">Click to Register</a>
+                            <input type="password" name="password" placeholder="Password">
+                            <button type="submit" class="btn">Register</button>
                         </form>
                     </div>
                 </div>
