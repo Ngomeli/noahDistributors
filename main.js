@@ -9,19 +9,18 @@ function menutoggle() {
         MenuItems.style.maxHeight = "0px";
     }
 }
-var loginForm = document.getElementById("loginForm");
-        var registerForm = document.getElementById("registerForm");
-        var indicator = document.getElementById("indicator");
-        function login() {
-            registerForm.style.transform = "translateX(300px)";
-            loginForm.style.transform = "translateX(300px)";
-            indicator.style.transform = "translateX(0px)";
-        }
-        
-        function register() {
-            registerForm.style.transform = "translateX(0px)";
-            loginForm.style.transform = "translateX(0px)";
-            indicator.style.transform = "translateX(100px)";
-        }
 
+var menuBtn = document.getElementById("menuBtn");
+var sideNav = document.getElementById("MenuItems");
+var menu = document.getElementById("menu");
+sideNav.style.right == "-250px"; /*the nav is hidden in the webpage*/
+menuBtn.onclick = function() {
+    if (sideNav.style.right == "-250px") {
+        sideNav.style.right = "0"; /*the navbar appears on the web page*/
+        menu.src = "images/close.png"; /*the close image shows up*/
+    } else {
+        sideNav.style.right = "-250px";
+        menu.src = "images/menu.png"; /*the open image shows up*/
+    }
+}
        

@@ -49,8 +49,8 @@ p {
 .container {
     max-width: 1300px;
     margin: auto;
-    /* padding-left: 5px;
-    padding-right: 5px; */
+    padding-left: 25px;
+    padding-right: 25px;
 }
 
 .row {
@@ -173,6 +173,117 @@ form a {
 }
 
 
+/*------------------------------footer Section---------------------------*/
+
+#meetUs {
+    padding: 100px 0 20px;
+    background-color: #efefef;
+    position: relative;
+}
+
+.footerRow {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.footerLeft,
+.footerRight {
+    flex-basis: 45%;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+.footerRight {
+    text-align: right;
+}
+
+.footerRow h1 {
+    margin: 10px 0;
+}
+
+.footerRow p {
+    line-height: 35px;
+}
+
+.footerLeft .far,
+.footerRight .fas {
+    font-size: 20px;
+    color: #ff523b;
+    margin: 10px;
+}
+
+.footerImg {
+    max-width: 370px;
+    /* opacity: 0.1; */
+    position: absolute;
+    left: 50%;
+    top: 35%;
+    transform: translate(-50%, -50%);
+}
+
+.socialLinks {
+    text-align: center;
+}
+
+.socialLinks .fab {
+    height: 40px;
+    width: 40px;
+    font-size: 20px;
+    line-height: 40px;
+    border: 1px solid #ff523b;
+    margin: 40px 5px 0;
+    color: #ff523b;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.socialLinks .fab:hover {
+    background-color: #ff523b;
+    color: #fff;
+    transform: translateY(-7px);
+}
+
+.socialLinks p {
+    font-size: 12px;
+    margin-top: 20px;
+}
+
+.titleText {
+    text-align: center;
+    padding-bottom: 70px;
+}
+
+.titleText p {
+    margin: auto;
+    font-size: 20px;
+    color: #ff523b;
+    font-weight: bold;
+    position: relative;
+    z-index: 1;
+    display: inline-block;
+}
+
+.titleText p::after {
+    content: '';
+    width: 50px;
+    height: 35px;
+    background: linear-gradient(#ff523b, #fff);
+    position: absolute;
+    top: -20px;
+    left: 0;
+    z-index: -1;
+    transform: rotate(10deg);
+    border-top-left-radius: 35px;
+    border-bottom-right-radius: 35px;
+}
+
+.titleText h1 {
+    font-size: 50px;
+}
+
 @media(max-width:768px) {
     nav ul {
         position: absolute;
@@ -197,6 +308,17 @@ form a {
     .menuBtn {
         display: block;
         cursor: pointer;
+    }
+    .titleText h1 {
+        font-size: 35px;
+    }
+    .footerLeft,
+    .footerRight {
+        flex-basis: 100%;
+        font-size: 14px;
+    }
+    .footerImg {
+        top: 25%;
     }
 }
 
