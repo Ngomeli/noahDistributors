@@ -26,22 +26,6 @@ $user_data = check_login($conn);
                 <div class="logo">
                     <a href="index.php"> <img src="images/NOAH DISTRIBUTORS PNG.png" alt="logo icon" width="125px"></a>
                 </div>
-                <section id="sideNav">
-        <nav>
-            <ul>
-
-                <li> <a href="#banner">Home</a></li>
-                <li><a href="#features">Features</a></li>
-                <li> <a href="#services">Services</a></li>
-                <li><a href="#testimonial">Testimonials</a></li>
-                <li><a href="#meetUs">Meet Us</a></li>
-
-            </ul>
-        </nav>
-        <div id="menuBtn">
-            <img src="images/menu.png" alt="menu png" id="menu">
-        </div>
-    </section>
                 <nav>
                     <ul id="MenuItems">
                         <li><a href="index.php">Home</a></li>
@@ -53,7 +37,7 @@ $user_data = check_login($conn);
                 </nav>
                 <a href="cart.html" target="_blank"><img src="images/cart.png" alt="Cart image" class="cart" width="30px" height="30px"></a>
                 <div id="menuBtn">
-                <img src="images/menu.png" alt="" class="menuBtn" id="menu">
+                <img src="images/menu.png" alt="" class="menuBtn" id="menu" onclick="menutoggle()">
             </div>
             </div>
         </div>
