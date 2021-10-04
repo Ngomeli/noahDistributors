@@ -147,7 +147,13 @@ form input {
     padding: 0 10px;
     border: 1px solid #ccc;
 }
-
+form label{
+    width: 100%;
+    height: 30px;
+    margin: 10px 0;
+    padding: 0 10px;
+    /* border: 1px solid #ccc; */
+}
 form .btn {
     width: 100%;
     border: none;
@@ -159,7 +165,13 @@ form .btn:focus {
     outline: none;
 }
 
+#servicesForm {
+    left: -300px;
+}
 
+#productsForm {
+    left: 0;
+}
 form a {
     font-size: 12px;
 }

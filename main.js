@@ -10,6 +10,23 @@ function menutoggle() {
     }
 }
 
+var servicesForm = document.getElementById("servicesForm");
+var productsForm = document.getElementById("productsForm");
+var indicator = document.getElementById("indicator");
+
+function products() {
+    productsForm.style.transform = "translateX(0px)";
+    servicesForm.style.transform = "translateX(0px)";
+    indicator.style.transform = "translateX(100px)";
+}
+
+function services() {
+    productsForm.style.transform = "translateX(300px)";
+    servicesForm.style.transform = "translateX(300px)";
+    indicator.style.transform = "translateX(0px)";
+}
+
+
 // var menuBtn = document.getElementById("menuBtn");
 // var sideNav = document.getElementById("MenuItems");
 // var menu = document.getElementById("menu");
