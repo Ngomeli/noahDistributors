@@ -1,0 +1,57 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.wrapper{
+    padding: 1%;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.text-center{
+    text-align: center;
+}
+.clearfix{
+    float: none;
+    clear: both;
+}
+/************************Header Section************************/
+header{
+    border-bottom:1px solid gray ;
+}
+header ul{
+    list-style: none;
+}
+header ul li{
+    display: inline;
+    padding: 1%;
+
+}
+
+header ul li a{
+    text-decoration: none;
+    font-weight: bold;
+    color: rgba(0, 0, 0, 0.664);
+
+}
+/***************************Main Section**************************/
+main{
+    background: radial-gradient(#fff, #ffd6d6);
+    padding: 3% 0;
+}
+
+.col-4{
+    width: 16%;/*if you want decrease the size of the box especially when you are adding another box*/
+    background-color: whitesmoke;
+    margin: 1%;
+    padding: 2%;
+    float: left;
+}
+
+/*************************Footer Section*************************/
+footer{
+    background-color: #ff523b;
+    color: #ffff;
+}
