@@ -19,6 +19,10 @@ if(isset($_SESSION['delete'])){
     echo $_SESSION['delete'];
     unset($_SESSION['delete']);
 }
+if(isset($_SESSION['update'])){
+    echo $_SESSION['update'];
+    unset($_SESSION['update']);
+}
         ?>
         <br><br><br>
         <a href="add-admin.php" class="btn-primary">Add Admin</a>
@@ -57,7 +61,7 @@ if(isset($_SESSION['delete'])){
                <td><?php echo $full_name; ?></td>
                <td><?php echo $user_name; ?></td>
                <td>
-                  <a href="#" class="btn-secondary">Update Admin</a> 
+                  <a href="update-admin.php?id=<?php echo $id;?>" class="btn-secondary">Update Admin</a> 
                   <a href="delete-admin.php?id=<?php echo $id;?>" class="btn-danger">Delete Admin</a> 
                </td>
            </tr>

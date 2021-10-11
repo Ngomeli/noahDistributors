@@ -162,7 +162,7 @@ form a {
 }
 
 #indicator {
-    width: 100px;
+    width: 100%;
     border: none;
     background-color: #ff523b;
     height: 3px;
@@ -189,6 +189,7 @@ form a {
 .error{
     color: #ff4757;
 }
+
 /************************Header Section************************/
 header{
     border-bottom:1px solid gray ;
