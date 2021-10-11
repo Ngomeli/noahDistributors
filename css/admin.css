@@ -181,6 +181,14 @@ form a {
 .btn:hover {
     background-color: #563434;
 }
+
+.success{
+    color: #2ed573;
+}
+
+.error{
+    color: #ff4757;
+}
 /************************Header Section************************/
 header{
     border-bottom:1px solid gray ;
