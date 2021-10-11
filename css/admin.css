@@ -52,7 +52,7 @@ a {
 }
 
 .btn-secondary{
-    background-color: #ff413b;
+    background-color: #28FFBF;
     color: #fff;
     padding: 8px 30px;
     margin: 30px 0;
@@ -61,10 +61,10 @@ a {
 }
 
 .btn-secondary:hover {
-    background-color: #563434;
+    background-color: #66DE93;
 }
 .btn-danger{
-    background-color: #ff413b;
+    background-color: #FF7878;
     color: #fff;
     padding: 8px 30px;
     margin: 30px 0;
@@ -73,7 +73,7 @@ a {
 }
 
 .btn-danger:hover {
-    background-color: #563434;
+    background-color: #FF5C58;
 }
 .container {
     max-width: 1300px;

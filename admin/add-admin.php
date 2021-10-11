@@ -1,5 +1,7 @@
 
 <?php
+
+session_start();
  include('partials/header.php');
  include('../dbConnection.php');
 
@@ -17,6 +19,14 @@ if(isset($_POST['submit'])){
 
     //execute query and save data in database
     $res = mysqli_query($conn,$sql);
+
+    //check if query is executed
+    if($res==TRUE){
+        $_SESSION['add'] = "Admin Added Successfully";
+        header("Location:manage-admin.php");
+    }else{
+        $_SESSION['add'] = "Failed to Add Admin";
+    }
 
 }
 

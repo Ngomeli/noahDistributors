@@ -1,4 +1,7 @@
-<?php include('partials/header.php');?>
+<?php 
+include('partials/header.php');
+include('../dbConnection.php');
+?>
 <main>
     <div class="wrapper">
     <h1>Manage Category</h1>
