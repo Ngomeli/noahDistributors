@@ -1,7 +1,7 @@
     <?php 
+    session_start();
     include('partials/header.php');
     include('../dbConnection.php');
-
     ?>
         <main>
             <div class="wrapper">

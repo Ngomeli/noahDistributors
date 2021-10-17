@@ -1,6 +1,7 @@
 <?php 
-include('partials/header.php');
 include('../dbConnection.php');
+include('partials/header.php');
+
 ?>
 <main>
     <div class="wrapper">

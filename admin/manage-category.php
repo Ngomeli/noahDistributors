@@ -1,12 +1,21 @@
-<?php 
+<?php
+session_start();
+include('../dbConnection.php'); 
 include('partials/header.php');
-include('../dbConnection.php');
+
 ?>
 <main>
     <div class="wrapper">
     <h1>Manage Category</h1>
     <br>
-        <a href="#" class="btn-primary">Add Category</a>
+    <?php
+    if(isset($_SESSION['add'])){
+     echo $_SESSION['add'];
+     unset($_SESSION['add']);
+     }
+      ?>
+                            <br><br>
+        <a href="add-category.php" class="btn-primary">Add Category</a>
         <br><br>
        <table class="tbl-full">
            <tr>

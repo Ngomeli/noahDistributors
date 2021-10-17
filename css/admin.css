@@ -124,7 +124,18 @@ a {
     overflow: hidden;
     /*it hides the other form when the user selects either login or register*/
 }
-
+.formContainerAdd {
+    position: relative;
+    background-color: #fff;
+    width: 300px;
+    height: 400px;
+    text-align: center;
+    padding: 20px 0;
+    margin: auto;
+    box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    /*it hides the other form when the user selects either login or register*/
+}
 .formContainer span {
     font-weight: bold;
     padding: 0 10px;
@@ -143,6 +154,13 @@ a {
     padding: 0 20px;
     position: absolute;
     top: 130px;
+    transition: transform 1s;
+}
+.formContainerAdd form {
+    max-width: 100%;
+    /* padding: 0 20px; */
+    position: absolute;
+    /* top: 130px; */
     transition: transform 1s;
 }
 
