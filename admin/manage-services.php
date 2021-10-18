@@ -12,8 +12,10 @@ include('partials/header.php');
        <table class="tbl-full">
            <tr>
                <th>S.N</th>
-               <th>Full Name</th>
-               <th>Username</th>
+               <th>Title</th>
+               <th>Image</th>
+               <th>Featured</th>
+               <th>Active</th>
                <th>Actions</th>
            </tr>
 
@@ -21,9 +23,11 @@ include('partials/header.php');
                <td>1.</td>
                <td>Joshua Ngomeli</td>
                <td>Ngomeli</td>
+               <td></td>
+               <td></td>
                <td>
-                  <a href="#" class="btn-secondary">Update Admin</a> 
-                  <a href="#" class="btn-danger">Delete Admin</a> 
+                  <a href="#" class="btn-secondary">Update Service</a> 
+                  <a href="#" class="btn-danger">Delete Service</a> 
                </td>
            </tr>
        </table>
