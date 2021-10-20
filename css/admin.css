@@ -25,6 +25,7 @@
 .tbl-30{
     width: 30%;
 }
+
 table tr th{
     border-bottom: 1px solid black;
     padding: 1%;
@@ -38,6 +39,7 @@ a {
     text-decoration: none;
     color: #555;
 }
+
 .btn-primary{
     background-color: #ff413b;
     color: #fff;
@@ -128,7 +130,7 @@ a {
     position: relative;
     background-color: #fff;
     width: 300px;
-    height: 400px;
+    height: 600px;
     text-align: center;
     padding: 20px 0;
     margin: auto;

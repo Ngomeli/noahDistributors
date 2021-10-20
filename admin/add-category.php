@@ -9,7 +9,7 @@
                     <div class="col-2">
             <div class="formContainerAdd">
                             <div class="formBtn">
-                                <span>Add Admin</span>
+                                <span>Add Category</span>
                                 <hr id="indicator">
                                 <?php
                                 if(isset($_SESSION['add'])){
@@ -23,27 +23,19 @@
                                 ?>
                             </div>
                             <form action="" method="POST" enctype="multipart/form-data">
-                                <table>
+                            
                                 <input type="text" name="title" placeholder="Category Title">
                                 <input type="file" name="image">
-                                <label>Featured:
+                                <label class="dip">Featured:
                                     <input type="radio" name="featured" value="Yes">Yes
                                     <input type="radio" name="featured" value="No">No
-                                </label>
-                               
-                            <label>Active:
-                                    <input type="radio" name="active" value="Yes">Yes
-                                    <input type="radio" name="active" value="No">No
-                                    </label>                                
-                                <tr>
-                                    <td colspan="6">
-                                    <button type="submit" name="submit" class="btn">Add Category</button>
-                                    </td>
-                                </tr>
-                                <!-- <input type="password" name="password" placeholder="Your Password">
-                                -->
-                                </table>
-                            </form>
+                                    </label>                             
+                            <label>Active:</label>
+                                    <input  type="radio" name="active" value="Yes">Yes
+                                    <input  type="radio" name="active" value="No">No
+                                <button type="submit" name="submit" class="btn">Add Category</button>
+                                   
+                             </form>
                             <?php
                             //check if submit button is clicked
                             if(isset($_POST['submit'])){
@@ -68,9 +60,14 @@
                             if(isset($_FILES['image']['name'])){
                                 //upload image
                                 $image_name = $_FILES['image']['name'];
+
+                                //upload the image only if image is selected
+                                if($image_name !=""){
+
+                                
                                 $source_path = $_FILES['image']['tmp_name'];
                                 $destination_path = "../images/category/".$image_name;
-                                // $destination_path = "../images/category/".$image_name;
+
 
                                 $upload = move_uploaded_file($source_path, $destination_path);
 
@@ -79,7 +76,7 @@
                                     header("Location:add-category.php");
                                     die();
                                 }
-
+                            }
                             }else{
                                 //don't upload image
                                 $image_name="";
