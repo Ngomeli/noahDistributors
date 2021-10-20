@@ -39,8 +39,8 @@
                                 <hr id="indicator">
                             </div>
                             <form action="" method="POST">
-                                <input type="text" name="full_name" value="<?php echo $full_name;?>">
-                                <input type="text" name="user_name" value="<?php echo $user_name;?>">
+                                <input type="text" name="full_name" value="<?php echo $full_name;?>" placeholder="Full Name">
+                                <input type="text" name="user_name" value="<?php echo $user_name;?>" placeholder="Username">
                                 <!-- hidden hides the id -->
                                 <input type="hidden" name="id" value="<?php echo $id;?>"> 
                                 <button type="submit" name="submit" class="btn">Update Admin</button>
