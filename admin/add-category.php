@@ -26,7 +26,7 @@
                             
                                 <input type="text" name="title" placeholder="Category Title">
                                 <input type="file" name="image">
-                                <label class="dip">Featured:
+                                <label>Featured:
                                     <input type="radio" name="featured" value="Yes">Yes
                                     <input type="radio" name="featured" value="No">No
                                     </label>                             
