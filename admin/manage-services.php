@@ -15,6 +15,15 @@ include('partials/header.php');
             echo $_SESSION['add'];
             unset($_SESSION['add']);
             }
+            if(isset($_SESSION['delete'])){
+                echo $_SESSION['delete'];
+                unset($_SESSION['delete']);
+                }
+            if(isset($_SESSION['upload'])){
+               echo $_SESSION['upload'];
+               unset($_SESSION['upload']);
+                } 
+             
             ?>
        <table class="tbl-full">
            <tr>
@@ -81,7 +90,7 @@ include('partials/header.php');
                                     <td>
           
                   <a href="update-service.php" class="btn-secondary">Update Service</a> 
-                  <a href="delete-service.php" class="btn-danger">Delete Service</a> 
+                  <a href="delete-service.php?id=<?php echo $id; ?>&image_name=<?php echo $image_name; ?>" class="btn-danger">Delete Service</a> 
                </td>
            </tr>
            <?php
