@@ -65,9 +65,6 @@
 
                                 // Display on Drpopdown
                             ?>
-                                ?>
-                                <option value="1">Bikes</option>
-                                <option value="2">Skates Shoes</option>
                             </select> <br>
                             <label>Featured:
                                     <input type="radio" name="featured" value="Yes" width="10px">Yes

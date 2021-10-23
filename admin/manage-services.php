@@ -23,7 +23,14 @@ include('partials/header.php');
                echo $_SESSION['upload'];
                unset($_SESSION['upload']);
                 } 
-             
+            if(isset($_SESSION['failed-remove'])){
+               echo $_SESSION['failed-remove'];
+               unset($_SESSION['failed-remove']);
+                } 
+          if(isset($_SESSION['update'])){
+             echo $_SESSION['update'];
+            unset($_SESSION['update']);
+            } 
             ?>
        <table class="tbl-full">
            <tr>
@@ -89,7 +96,7 @@ include('partials/header.php');
                                     <td><?php echo $active; ?></td>
                                     <td>
           
-                  <a href="update-service.php" class="btn-secondary">Update Service</a> 
+                  <a href="update-service.php?id=<?php echo $id; ?>" class="btn-secondary">Update Service</a> 
                   <a href="delete-service.php?id=<?php echo $id; ?>&image_name=<?php echo $image_name; ?>" class="btn-danger">Delete Service</a> 
                </td>
            </tr>
@@ -100,7 +107,7 @@ include('partials/header.php');
         else
         {
             //Food not Added in Database
-            echo "<tr> <td colspan='7' class='error'> Food not Added Yet. </td> </tr>";
+            echo "<tr> <td colspan='7' class='error'> Service not Added Yet. </td> </tr>";
         }
 
     ?>
