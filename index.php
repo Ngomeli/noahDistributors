@@ -8,6 +8,52 @@ $user_data = check_login($conn);
 
 ?>
 <?php include("header.php");?>
+<section class="categories">
+        <div class="containerF">
+            <h2 class="text-center">Explore Services</h2>
+            <?php 
+            //SQl query to display categories from database
+            $sql = "SELECT * FROM category";
+            //Execute the query
+            $res = mysqli_query($conn,$sql);
+            //coutnrows to check category is available or not
+            $count = mysqli_num_rows($res);
+
+            if($count>0){
+
+                while($row=mysqli_fetch_assoc($res)){
+                    //Get the values like id, title, image_name
+                    $id = $row['id'];
+                    $title = $row['title'];
+                    $image_name = $row['image_name'];
+                    ?>
+                   <a href="category-service.php">
+                       <div class="box-3 float-container">
+                           <?php
+                           if($image_name==""){
+                              echo"<div class='error'>Image not Available</div>"; 
+                           }else{
+
+                            ?>
+                            <img src="images/category/<?php echo $image_name; ?>" class="img-responsive">
+                            <?php
+                           }
+
+                           ?>
+                           
+
+                           <h3 class="float-text text-white"><?php echo $title; ?></h3></h3>
+                       </div>
+                   </a> 
+                   <?php
+
+                }
+            }else{
+                echo "<div class='error'>Category not Added</div>";
+            }
+            ?>
+        </div>
+</section>
 <section class="accountPage">
         <div class="container">
             <div class="row">

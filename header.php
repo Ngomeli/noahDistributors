@@ -1,3 +1,7 @@
+<?php 
+include("dbConnection.php");
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -21,13 +25,13 @@
                 <nav>
                     <ul id="MenuItems">
                         <li><a href="index.php">Home</a></li>
-                        <li><a href="#products">Products</a></li>
-                        <li><a href="#services">Services</a></li>
-                        <li><a href="#about">About</a></li>
-                        <li><?php echo $user_data['user_name']; ?> <a href="logout.php">Logout</a></li>
+                        <li><a href="categories.php">Categories</a></li>
+                        <li><a href="services.php">Services</a></li>
+                        <li><a href="#meetUs">Contact</a></li>
+                        <li><a href="logout.php">Logout</a></li>
                     </ul>
                 </nav>
-                <a href="cart.html" target="_blank"><img src="images/cart.png" alt="Cart image" class="cart" width="30px" height="30px"></a>
+                <a href="order.php" target="_blank"><img src="images/cart.png" alt="Cart image" class="cart" width="30px" height="30px"></a>
                 <div id="menuBtn">
                 <img src="images/menu.png" alt="" class="menuBtn" id="menu" onclick="menutoggle()">
             </div>
