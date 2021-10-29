@@ -1,4 +1,4 @@
-    <?php
+<?php
         session_start();
         include('../dbConnection.php');
         include('partials/header.php');
@@ -150,10 +150,14 @@
                   }
                                         
                 }
-                 }else{
+                 }
+                 else
+                 {
                  $image_name = $current_image;  
                 }
-                }else{
+                }
+                else
+                {
                 $image_name = $current_image;
                 }
                     //update the services database
