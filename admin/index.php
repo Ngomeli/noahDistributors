@@ -15,24 +15,61 @@
           ?>
          <br><br>
             <div class="col-4 text-center">
-                <h1>The</h1>
+                <?php
+                $sql= "SELECT * FROM category";
+                $res = mysqli_query($conn, $sql);
+                        //Count Rows
+                $count = mysqli_num_rows($res);
+                ?>
+                <h1><?php echo $count; ?></h1>
                 <br>
                 Categories
             </div>
             <div class="col-4 text-center">
-                <h1>The</h1>
+            <?php 
+                        //Sql Query 
+              $sql2 = "SELECT * FROM services";
+                        //Execute Query
+              $res2 = mysqli_query($conn, $sql2);
+                        //Count Rows
+              $count2 = mysqli_num_rows($res2);
+                    ?>
+                <h1><?php echo $count2; ?></h1>
                 <br>
-                Categories
+                Services
             </div>
             <div class="col-4 text-center">
-                <h1>The</h1>
+            <?php 
+                        //Sql Query 
+                        $sql3 = "SELECT * FROM service_booking";
+                        //Execute Query
+                        $res3 = mysqli_query($conn, $sql3);
+                        //Count Rows
+                        $count3 = mysqli_num_rows($res3);
+                    ?>
+                <h1><?php echo $count3; ?></h1>
                 <br>
-                Categories
+                Total Bookings
             </div>
             <div class="col-4 text-center">
-                <h1>The</h1>
+            <?php 
+                        //Creat SQL Query to Get Total Revenue Generated
+                        //Aggregate Function in SQL
+                        $sql4 = "SELECT SUM(total) AS Total FROM service_booking WHERE status='Booked'";
+
+                        //Execute the Query
+                        $res4 = mysqli_query($conn, $sql4);
+
+                        //Get the VAlue
+                        $row4 = mysqli_fetch_assoc($res4);
+                        
+                        //GEt the Total REvenue
+                        $total_revenue = $row4['Total'];
+
+                    ?>
+                <h1>$<?php echo $total_revenue; ?></h1>
                 <br>
-                Categories
+                Revenue Generated
             </div>
             <div class="clearfix"></div>
             </div>
