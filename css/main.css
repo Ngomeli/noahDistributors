@@ -334,7 +334,7 @@ a:hover{
     color: #ff4757;
 }
 
-.btn{
+/* .btn{
     padding: 1%;
     border: none;
     font-size: 1rem;
@@ -348,7 +348,7 @@ a:hover{
 .btn-primary:hover{
     color: white;
     background-color: #ff4757;
-}
+} */
 h2{
     color: #2f3542;
     font-size: 2rem;

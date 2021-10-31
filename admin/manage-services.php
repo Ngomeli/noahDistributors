@@ -36,7 +36,7 @@ include('partials/header.php');
            <tr>
                <th>S.N</th>
                <th>Title</th>
-                <th>Price@hour</th>
+                <th>Price</th>
                 <th>Image</th>
                 <th>Featured</th>
                 <th>Active</th>

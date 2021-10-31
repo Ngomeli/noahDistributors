@@ -31,7 +31,7 @@ include("dbConnection.php");
                         <li><a href="logout.php">Logout</a></li>
                     </ul>
                 </nav>
-                <a href="order.php" target="_blank"><img src="images/cart.png" alt="Cart image" class="cart" width="30px" height="30px"></a>
+                <a href="order.php"><img src="images/cart.png" alt="Cart image" class="cart" width="30px" height="30px"></a>
                 <div id="menuBtn">
                 <img src="images/menu.png" alt="" class="menuBtn" id="menu" onclick="menutoggle()">
             </div>

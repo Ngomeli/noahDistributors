@@ -8,6 +8,16 @@ $user_data = check_login($conn);
 
 ?>
 <?php include("header.php");?>
+<section class="service-search text-center">
+        <div class="containerF">
+            
+            <form action="service-search.php" method="POST">
+                <input type="search" name="search" placeholder="Search for Service.." required>
+                <input type="submit" name="submit" value="Search" class="btn btn-primary">
+            </form>
+
+        </div>
+    </section>
 <section class="categories">
         <div class="containerF">
             <h2 class="text-center">Explore Services</h2>
@@ -63,7 +73,7 @@ $user_data = check_login($conn);
             
             //Getting services from Database that are active and featured
             //SQL Query
-            $sql2 = "SELECT * FROM services WHERE active='Yes' AND featured='Yes' LIMIT 6";
+            $sql2 = "SELECT * FROM services WHERE active='Yes' AND featured='Yes' LIMIT 4";
 
             //Execute the Query
             $res2 = mysqli_query($conn, $sql2);
