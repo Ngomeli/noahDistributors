@@ -16,7 +16,7 @@ include("header.php");
             ?>
 
 
-            <h2>Foods on Your Search <a href="#" class="text-white">"<?php echo $search; ?>"</a></h2>
+            <h2>Services on Your Search <a href="#" class="text-black">"<?php echo $search; ?>"</a></h2>
 
         </div>
     </section>
@@ -45,7 +45,7 @@ include("header.php");
                 //Check whether service available or not
                 if($count>0)
                 {
-                    //Food Available
+                    //Service Available
                     while($row=mysqli_fetch_assoc($res))
                     {
                         //Get the details
@@ -85,7 +85,7 @@ include("header.php");
                                 </p>
                                 <br>
 
-                                <a href="#" class="btn btn-primary">Order Now</a>
+                                <a href="order.php?service_id=<?php echo $id; ?>" class="btn btn-primary">Book Now</a>
                             </div>
                         </div>
 
@@ -94,7 +94,7 @@ include("header.php");
                 }
                 else
                 {
-                    //Food Not Available
+                    //Service Not Available
                     echo "<div class='error'>Service not found.</div>";
                 }
             

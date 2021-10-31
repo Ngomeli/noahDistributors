@@ -320,7 +320,9 @@ form a {
 .text-white{
     color: white;
 }
-
+.text-black{
+    color: #000;
+}
 .clearfix{
     clear: both;
     float: none;
@@ -372,8 +374,16 @@ fieldset{
     border-radius: 5px;
 }
 
+.success{
+    color: #2ed573;
+}
+
+.error{
+    color: #ff4757;
+}
+
 .service-search{
-    background-image: url(../images/bg.jpg);
+    background-image: url(../images/bg.jpeg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -446,7 +456,7 @@ fieldset{
 }
 
 /* for Order Section */
-.order{
+.book{
     width: 50%;
     margin: 0 auto;
 }
@@ -458,9 +468,13 @@ fieldset{
     border-radius: 5px;
     font-size: 1rem;
 }
-.order-label{
+.book-label{
     margin-bottom: 1%; 
     font-weight: bold;
+    color: #fff;
+}
+legend{
+    color: #fff;
 }
 
 
@@ -516,7 +530,7 @@ fieldset{
     .social{
         padding: 5% 0;
     }
-    .order{
+    .book{
         width: 100%;
     }
 }

@@ -18,6 +18,12 @@ $user_data = check_login($conn);
 
         </div>
     </section>
+    <?php
+    if(isset($_SESSION['book'])){
+        echo $_SESSION['book'];
+        unset($_SESSION['book']);
+    }
+    ?>
 <section class="categories">
         <div class="containerF">
             <h2 class="text-center">Explore Services</h2>
@@ -37,7 +43,7 @@ $user_data = check_login($conn);
                     $title = $row['title'];
                     $image_name = $row['image_name'];
                     ?>
-                   <a href="category-service.php">
+                   <a href="category-service.php?category_id=<?php echo $id; ?>">
                        <div class="box-3 float-container">
                            <?php
                            if($image_name==""){
@@ -65,7 +71,7 @@ $user_data = check_login($conn);
             <div class="clearfix"></div>
         </div>
 </section>
-<section class="food-menu">
+<section class="service-menu">
         <div class="containerF">
             <h2 class="text-center">Services</h2>
 

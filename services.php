@@ -19,7 +19,7 @@ include("header.php");
 
     <!-- Service Section Starts Here -->
     <section class="service-menu">
-        <div class="container">
+        <div class="containerF">
             <h2 class="text-center">Services</h2>
 
             <?php 
