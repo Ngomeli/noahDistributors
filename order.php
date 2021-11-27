@@ -4,7 +4,7 @@ include("header.php");
 ?>
 
 <?php 
-        //CHeck whether food id is set or not
+        //CHeck whether service id is set or not
         if(isset($_GET['service_id']))
         {
             //Get the service id and details of the selected food
@@ -52,7 +52,7 @@ include("header.php");
                     <legend>Selected Service</legend>
 
                     <div class="service-menu-img">
-                        <?php 
+<?php 
                         
                             //CHeck whether the image is available or not
                             if($image_name=="")
@@ -63,12 +63,11 @@ include("header.php");
                             else
                             {
                                 //Image is Available
-                                ?>
+?>
                                 <img src="images/service/<?php echo $image_name; ?>"class="img-responsive img-curve">
-                                <?php
+<?php
                             }
-                        
-                        ?>
+?>
                         
                     </div>
     
@@ -81,7 +80,9 @@ include("header.php");
 
                         <div class="book-label">Quantity</div>
                         <input type="number" name="qty" class="input-responsive" value="1" required>
-                        
+                        <input type="hidden" name="book_date" class="hidden">
+                        <div class="book-label">Request Date and Time</div>
+                        <input type="datetime-local" name="service_date" class="input-responsive">
                     </div>
 
                 </fieldset>
@@ -105,7 +106,7 @@ include("header.php");
 
             </form>
 
-            <?php 
+<?php 
 
                 //CHeck whether submit button is clicked or not
                 if(isset($_POST['submit']))
@@ -115,10 +116,10 @@ include("header.php");
                     $service = $_POST['service'];
                     $price = $_POST['price'];
                     $qty = $_POST['qty'];
-
+                    $book_date = $_POST['book_date'];
                     $total = $price * $qty; // total = price x qty 
-
                     $book_date = date("Y-m-d h:i:sa"); //booking DAte
+
 
                     $status = "Booked";  // booked, alreardyy,Cancelled
 
@@ -126,6 +127,7 @@ include("header.php");
                     $customer_contact = $_POST['contact'];
                     $customer_email = $_POST['email'];
                     $customer_address = $_POST['address'];
+                    $service_date = $_POST['service_date'];
 
 
                     //Save the Order in Databaase
@@ -140,31 +142,37 @@ include("header.php");
                         customer_name = '$customer_name',
                         customer_contact = '$customer_contact',
                         customer_email = '$customer_email',
-                        customer_address = '$customer_address'
+                        customer_address = '$customer_address',
+                        service_date = '$service_date'
                     ";
 
                     //echo $sql2; die();
 
                     //Execute the Query
                     $res2 = mysqli_query($conn, $sql2);
-
                     //Check whether query executed successfully or not
+                    
                     if($res2==true)
                     {
                         //Query Executed 
-                        $_SESSION['book'] = "<div class='success text-center'>Service Booked Successfully.</div>";
-                        header("location:index.php");
+                        $_SESSION['service_book'] = "<div class='success text-center'>Service Booked Successfully.</div>";
+                        if(!headers_sent()){
+                            header("location:index.php");
+                        }else{
+                            echo '<script type="text/javascript">windows.location.href="index.php";</script>';
+                        }
+                        
+                       
                     }
                     else
                     {
                         //Failed to Save booking
-                        $_SESSION['book'] = "<div class='error text-center'>Failed to Book Service.</div>";
+                        $_SESSION['service_book'] = "<div class='error text-center'>Failed to Book Service.</div>";
                         header("Location:index.php");
                     }
 
                 }
-            
-            ?>
+?>
 
         </div>
     </section>

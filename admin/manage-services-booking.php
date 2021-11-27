@@ -17,16 +17,17 @@ include('partials/header.php');
           <table class="tbl-full">
        <tr>
                         <th>S.N.</th>
-                        <th>Food</th>
+                        <th>Service</th>
                         <th>Price</th>
                         <th>Qty.</th>
                         <th>Total</th>
-                        <th>Order Date</th>
+                        <th>Date</th>
                         <th>Status</th>
                         <th>Customer Name</th>
                         <th>Contact</th>
                         <th>Email</th>
                         <th>Address</th>
+                        <th>Service Date</th>
                         <th>Actions</th>
                     </tr>
 
@@ -57,6 +58,7 @@ include('partials/header.php');
                                 $customer_contact = $row['customer_contact'];
                                 $customer_email = $row['customer_email'];
                                 $customer_address = $row['customer_address'];
+                                $service_date = $row['service_date'];
                                 
                                 ?>
 
@@ -94,6 +96,7 @@ include('partials/header.php');
                                         <td><?php echo $customer_contact; ?></td>
                                         <td><?php echo $customer_email; ?></td>
                                         <td><?php echo $customer_address; ?></td>
+                                        <td><?php echo $service_date; ?></td>
                                         <td>
                                             <a href="update-booking.php?id=<?php echo $id; ?>" class=" btn btn-secondary">Update Booking</a>
                                         </td>

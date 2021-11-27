@@ -48,7 +48,7 @@
                            <b> <?php echo $service; ?><br></b>
                                 <label>Price:</label>
                                <b>Ksh <?php echo $price; ?></b><br>
-                               <label>Qty</label>
+                               <label>Quantity</label>
                                <input type="number" name="qty" value="<?php echo $qty; ?>">
                                 <label>Status:
                                     <select name="status">

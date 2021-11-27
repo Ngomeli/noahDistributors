@@ -18,12 +18,12 @@ $user_data = check_login($conn);
 
         </div>
     </section>
-    <?php
-    if(isset($_SESSION['book'])){
-        echo $_SESSION['book'];
-        unset($_SESSION['book']);
+<?php
+    if(isset($_SESSION['service_book'])){
+        echo $_SESSION['service_book'];
+        unset($_SESSION['service_book']);
     }
-    ?>
+?>
 <section class="categories">
         <div class="containerF">
             <h2 class="text-center">Explore Services</h2>
@@ -155,17 +155,17 @@ $user_data = check_login($conn);
         </div>
 
         <p class="text-center">
-            <a href="#">See All Services</a>
+            <a href="services.php">See All Services</a>
         </p>
     </section>
 
 
-<section class="accountPage">
+<!-- <section class="accountPage">
         <div class="container">
             <div class="row">
                 <div class="col-2">
                     <!-- <img src="images/image1.png" width="100%"> -->
-                </div>
+                <!-- </div>
                 <div class="col-2">
                     <div class="formContainer">
                         <div class="formBtn">
@@ -200,7 +200,7 @@ $user_data = check_login($conn);
                     </div>
                 </div>
             </div>
-        </div>
+        </div> -->
     </section>  
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 

@@ -52,7 +52,7 @@
                 Total Bookings
             </div>
             <div class="col-4 text-center">
-            <?php 
+<?php 
                         //Creat SQL Query to Get Total Revenue Generated
                         //Aggregate Function in SQL
                         $sql4 = "SELECT SUM(total) AS Total FROM service_booking WHERE status='Booked'";
@@ -66,8 +66,8 @@
                         //GEt the Total REvenue
                         $total_revenue = $row4['Total'];
 
-                    ?>
-                <h1>$<?php echo $total_revenue; ?></h1>
+?>
+                <h1>Ksh<?php echo $total_revenue; ?></h1>
                 <br>
                 Revenue Generated
             </div>
